@@ -1,12 +1,17 @@
+html{
+	scroll-behavior: smooth;
+}
+
 body{
 	margin: 0px;   /*da bi stranica pocela od ivice */
 	padding: 0px;
+	font-family: Calibri, sans-serif;
 }
 
 
 .header{
-	border-bottom: 2px solid #dc0101;
-	
+	border-bottom: 2px solid #236;
+	background: #222;
 }
 
 .page{
@@ -29,52 +34,443 @@ body{
 	height: 100vh;  
 }
 
-#logo-i-social{
-	display: flex;
-}
-
-#logo-holder{
-	flex-grow: 1;
-}
-
-#social-holder{
-	flex-grow: 1;
-	text-align: right;
-}
-
-#social-holder a {
-	text-decoration: none;
-}
-
-#social-holder a img{
-	height: 24px;
-	width: 24px;
-	margin: 5px;
-}
 
 
+/*logo*/
+	#logo-i-social{
+		display: flex;
+	}
 
-#main-menu{
-	display: flex;
-}
+	#logo-holder{
+		flex-grow: 1;
+	}
 
-#main-menu a{
-	flex-grow:1;
-	text-align: center;
-	display: block;    /*zbog ovoga se moze pedding definisati */
-	padding: 10px 0;
-	text-decoration: none;
-	color: #dc0101;
-	transition: 300ms;    /* vreme za hover promenu */
+	#social-holder{
+		flex-grow: 1;
+		text-align: right;
+	}
+
+	#social-holder a {
+		text-decoration: none;
+	}
+
+	#social-holder a img{
+		height: 35px;
+		width: 35px;
+		margin: 5px;
+	}
+	#logo-holder img{
+		height: 80px;
+		width: 80px;
+		margin: 5px;
+		border-radius: 50px;
+	}
+
+
+/*meni*/
+	#main-menu{
+		display: flex;
+	}
+
+	#main-menu a{
+		flex-grow:1;
+		text-align: center;
+		display: block;    /*zbog ovoga se moze pedding definisati */
+		padding: 10px 0;
+		text-decoration: none;
+		color: #1e90ff;
+		transition: 300ms;    /* vreme za hover promenu */
+		font-size: 18px;
+	}
+
+	#main-menu a:hover,
+	#main-menu a.active{   /*kada se nalazimo na nekoj stranici */
+		background: #1e90ff;
+		color: white;
+	}
+
+
+
+/*pocetna*/
+		#pocetna{
+			text-align:center;
+			color:#ffffff;
+			background:url('img/avion.jpg');
+			background-size: cover; 
+			background-attachment:fixed;
+		}
+
+		#pocetna h1{
+			font-size: 48pt;
+			margin-top: 0px;
+			padding-top: calc(50vh - 250px);  /*prvo smo sa inspect izracunali koliko treba a onda pisemo ovo*/
+		}
+
+		.dark-box{
+			border:1px solid #ffffff;
+			background: #333333aa;  /*poslednja dva broja odredjuju koliko nam se element providi*/
+			font-size: 24pt;
+			padding: 40px;
+		}
+
+	#usluge{
+		
+		background:url('img/uslugepozadina.webp');
+		background-size: cover; 
+		background-attachment:fixed;
+	}
+
+	#karijera{
+		
+		background:url('img/iskustva.webp');
+		background-size: cover; 
+		background-attachment:fixed;
+	}
+
+/*o nama*/
+	#o-nama h2{
+		padding-top: 40px;
+	}
+
+	.krugovi{
+		display:flex;
+		margin: 40px 0;
+	}
+
+	.krug-holder{
+		flex-grow:1;
+		text-align:center;
+	}
+
+	.krug{
+		background: #dc0101;
+		color:#ffffff;
+		font-size:48px;
+		font-weight:bold;
+		padding: 25%;
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		border-radius: 50%;
+		
+	}
+
+	.oznaka{
+		font-size:24px;
+		font-weight:bold;
+		margin-top:10px;
+	}
+
+	.tehnologije{
+		display: flex;
+		margin: 40px 0;
+	}
+
+	.tehnologija {
+		flex-grow: 1;
+		text-align: center;
+		display:inline-block;
+		
+	}
+
+	.tehnologija img {
+		width: 48px;
+		height: 48px;
+	}
+
+	.tehnologija p{
+		font-weight:bold;
+	}
+
+
+/*usluge*/
+	#usluge{
+		color: #fff;
+	}
 	
-}
+	#usluge p{
+		font-size:20px;
+	}
 
-#main-menu a:hover,
-#main-menu a.active{   /*kada se nalazimo na nekoj stranici */
-	background: #dc0101;
-	color: white;
-}
+	#usluge h2{
+		padding-top: 100px;
+		padding-bottom: 50px;
+		font-size:30px;
+	}
+	#okruzujuci-service-row{
+		border:1px solid #ffffff;
+		background: #333333aa;
+		padding:40px;
+		
+	}
+	.service-row {
+		display: flex;
+		margin-bottom: 40px;
+		justify-content: space-between;
+	}
+
+	.service-row > div{
+		
+		text-align: center;
+		position: relative;
+		width:250px;
+		height: 150px;
+		border: 1px solid #fff;
+	}
+
+	.service-row > div > img{
+		height: 150px;
+		width: 250px;
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
+
+	.service-row > div > p{
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		padding: 10px;
+		background-color: #ffffffC0;
+		margin-bottom: 0px;
+		border-top: 1px solid #fff;
+		color: #000;
+		font-weight: bold;
+	}
 
 
+/*DESTINACIJE*/ 
+	#proizvodi h2{
+		padding-top: 50px;
+		text-align: center;
+		font-size:30px;
+		
+	}
+
+	.matrica{
+		margin-top: 40px;
+		height: 500px;
+		display: grid;
+		grid-template: "a b c"
+					   "d b e"
+					   "f f g";
+		align-content:space-between;
+		justify-content: space-between;
+	}
+
+
+
+	#proizvod-a{
+		grid-area: a;
+	}
+
+	#proizvod-b{
+		grid-area: b;
+	}
+	#proizvod-b img{
+		height: 300px;
+	}
+	#proizvod-b .text{
+		height: 300px;
+	}
+
+
+
+	#proizvod-c{
+		grid-area: c;
+	}
+
+	#proizvod-d{
+		grid-area: d;
+	}
+
+	#proizvod-e{
+		grid-area: e;
+	}
+
+	#proizvod-f{
+		grid-area: f;
+	}
+	#proizvod-f img{
+		width: 600px;
+	}
+	#proizvod-f .text{
+		width: 600px;
+	}
+
+
+	#proizvod-g{
+		grid-area: g;
+	}
+
+	.proizvod{     /*ovo je da bi u gridu isao tekst preko slike */
+		display: grid;
+		grid-template: "region";
+		align-content: stretch;
+		justify-content: stretch;
+	}
+
+	.proizvod img{
+		height: 150px;
+		width: 300px;
+		grid-area: region;
+		justify-self: stretch;
+		align-self: stretch;
+		
+	}
+
+	.proizvod .text{
+		grid-area: region;
+		display: grid;
+		align-content: center;
+		justify-content: center;
+		font-size: 20px;
+		font-weight: bold;
+		background-color: #dc010150;
+		color: #fff;
+		opacity: 0.0; /*da ne bude vidljivo */
+		transition: 400ms;
+	}
+	.proizvod:hover .text{
+		opacity: 1.0;
+	}
+
+/*KARIJERA*/
+		#karijera h2{
+			padding-top:50px;
+			text-align: center;
+			font-size:30px;
+		}
+		.career-columns{
+			display: flex;
+			
+		}
+
+		.job-list{
+			flex-grow: 1;
+			flex-basis: 0; 
+			text-align: left;
+			
+		}
+
+		.job-descriptions{
+			flex-grow: 2;
+			flex-basis:0;
+			
+		}
+
+
+
+		.job-list label{
+			display: block;
+			margin-bottom: 10px;
+			border: 1px solid #ffffff;
+			background-color: #ffffffc0;
+			padding: 10px;
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		.job-descriptions input{
+			display: none;
+			
+		}
+
+		.job-descriptions .job-description{
+			display: none;
+		}
+
+		.job-descriptions input:checked+.job-description{   /*ovome dodelimo da je aktian prvi u hijerarhijji za input sto je nas prvi opis posla */
+			display: block;
+		}
+
+		.job-description{
+			margin-left: 10px;
+			border: 1px solid #ffffff;
+			background-color: #ffffffc0;
+			padding: 10px;
+			font-size: 20px;
+			text-align: left;
+		}
+
+
+
+
+/*kontakt*/ 
+	#kontakt h2{
+		margin-top: 80px;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.kontakt-region{
+		display: grid;
+		grid-template: "adrese mapa"
+					  "mejlovi mapa";
+		grid-template-column: 300px 1fr;
+	}
+
+	.kontakt-adrese{
+		grid-area: adrese;
+		padding-bottom: 15px;
+		font-size: 14px;
+	}
+
+	.kontakt-mejlovi{
+		grid-area: mejlovi;
+	}
+
+
+
+	.kontakt-mapa{
+		grid-area: mapa;
+	}
+
+
+
+/*FUTER*/
+	.footer{
+		border-top: 3px solid #dc0101;
+		background: #fefefe;
+		font-size: 13px;
+	}
+
+	.footer > .column{
+		display:flex;
+	}
+
+	.footer .footer-column{
+		flex-grow: 1;
+		flex-basis: 0;
+		padding-top: 20px;
+		padding-bottom:50px;
+	}
+
+
+	.align-center{
+		text-align: center;
+		
+	}
+
+	.align-left{
+		text-align:left;
+	}
+
+	.align-right{
+		text-align: right;
+	}
+
+	.red-link{
+		text-decoration: none;
+		color: #dc0101;
+	}
+
+	.red-link:hover{
+		text-decoration: underline;
+		
+	}
 
 
